@@ -4,8 +4,8 @@
 // нажатие на другую кнопку -> событие -> все ulы удаляются
 // надо еще по отдельной кнопке к каждому добавляемому ulу, чтоб их отдельно удалять можно было
 
-document.getElementsByName("button-add") = button-add; //сокращенное имя для кнопки
-document.getElementsByName("button-delete") = button-delete; //сокращенное имя для кнопки
+button_add = document.getElementsByName("button-add"); //сокращенное имя для кнопки
+button_delete = document.getElementsByName("button-delete"); //сокращенное имя для кнопки
 
 
 const addNote = () => {
@@ -19,5 +19,5 @@ const deleteAllNotes = () => {
     console.log("deleteAllNotes works")
 }
 
-button-add.addEventListener(`click`, addNote); //добавляем заметку
-button-delete.addEventListener(`click`, deleteAllNotes); //удаляем все заметки
+button_add.addEventListener(`click`, addNote); //добавляем заметку
+button_delete.addEventListener(`click`, deleteAllNotes); //удаляем все заметки
