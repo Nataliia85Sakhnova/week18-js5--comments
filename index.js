@@ -4,14 +4,14 @@
 // нажатие на другую кнопку -> событие -> все ulы удаляются
 // надо еще по отдельной кнопке к каждому добавляемому ulу, чтоб их отдельно удалять можно было
 
-button_add = document.getElementsByName("button-add"); //сокращенное имя для кнопки
-button_delete = document.getElementsByName("button-delete"); //сокращенное имя для кнопки
+const button_add = document.getElementById("button_add"); //сокращенное имя для кнопки
+const button_delete = document.getElementById("button_delete"); //сокращенное имя для кнопки
 
 
 const addNote = () => {
     console.log("addNote works")
     //тут валидация видать нужна
-    document.getElementsByName("new-note").innerHTML = document.getElementById("input").value
+    document.getElementById("new_note").innerHTML = document.getElementById("input").value
     //надо сделать так, чтоб каждая новая заметка не переписывала старую, а добавляла новую
 }
 
