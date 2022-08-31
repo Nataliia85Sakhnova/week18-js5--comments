@@ -12,8 +12,11 @@ const notes = document.getElementById("notes") //список заметок
 
 
 const addNote = () => {
-    const li = notes.createElement(li); //создается поле для новой заметки
-    li.innerHTML = input.value;
+    notes.appendChild(li)
+    notes.createElement(li).innerHTML = input.value;
+    // const li = notes.createElement(li); //создается поле для новой заметки
+    // li.innerHTML = input.value;
+    // notes.appendChild(li)
     //создать валидацию, чтоб не добавлялись пустые заметки
     // var element = document.createElement(tagName, [options]);
     // var child = element.appendChild(child);
