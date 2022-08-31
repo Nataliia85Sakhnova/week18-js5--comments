@@ -4,20 +4,21 @@
 // нажатие на другую кнопку -> событие -> все ulы удаляются
 // надо еще по отдельной кнопке к каждому добавляемому ulу, чтоб их отдельно удалять можно было
 
-const button_add = document.getElementById("button_add"); //сокращенное имя для кнопки
-const button_delete = document.getElementById("button_delete"); //сокращенное имя для кнопки
-const form = document.getElementById("form"); //сокращенное имя для формы, куда пойдут все заметки
-const input = document.getElementById("input"); //сокращенное имя для поля ввода
-const new_note = document.getElementById("new_note")
+const button_add = document.getElementById("button_add"); //кнопка добавления
+const button_delete = document.getElementById("button_delete"); //кнопка удаления
+const form = document.getElementById("form"); //форма ввода
+const input = document.getElementById("input"); //поле ввода
+const notes = document.getElementById("notes") //список заметок
 
 
 const addNote = () => {
+    const li = notes.createElement(li); //создается поле для новой заметки
+    li.innerHTML = input.value;
     //создать валидацию, чтоб не добавлялись пустые заметки
-    //надо сделать так, чтоб каждая новая заметка не переписывала старую, а добавляла новую
-    // new_note.innerHTML = input.value
-    const oneMoreNote = document.createElement
-    // Node.appendChild(input.value);
+    // var element = document.createElement(tagName, [options]);
     // var child = element.appendChild(child);
+    // document.getElementById('container2').innerHTML = 'Должен быть выбран как минимум 1 пункт';
+    // Node.appendChild(input.value);
 }
 const deleteAllNotes = () => {
     new_note.innerHTML = "";
