@@ -6,17 +6,21 @@
 
 const button_add = document.getElementById("button_add"); //сокращенное имя для кнопки
 const button_delete = document.getElementById("button_delete"); //сокращенное имя для кнопки
+const form = document.getElementById("form"); //сокращенное имя для формы, куда пойдут все заметки
+const input = document.getElementById("input"); //сокращенное имя для поля ввода
+const new_note = document.getElementById("new_note")
 
 
 const addNote = () => {
-    console.log("addNote works")
-    //тут валидация видать нужна
-    document.getElementById("new_note").innerHTML = document.getElementById("input").value
+    //создать валидацию, чтоб не добавлялись пустые заметки
     //надо сделать так, чтоб каждая новая заметка не переписывала старую, а добавляла новую
+    // new_note.innerHTML = input.value
+    const oneMoreNote = document.createElement
+    // Node.appendChild(input.value);
+    // var child = element.appendChild(child);
 }
-
 const deleteAllNotes = () => {
-    console.log("deleteAllNotes works")
+    new_note.innerHTML = "";
 }
 
 button_add.addEventListener(`click`, addNote); //добавляем заметку
