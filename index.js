@@ -12,37 +12,37 @@ const notes = document.getElementById("notes") //список заметок ul
 
 
 const addNote = () => {
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(input.value));
-        notes.appendChild(li);
+    const li = document.createElement("li");
+    li.appendChild(document.createTextNode(input.value));
+    notes.appendChild(li);
+
+    const privat_button = document.createElement("button");
+    // privat_button.appendChild(document.createTextNode(input.value));
+    notes.appendChild(privat_button);
+    // elem.parentNode.removeChild(elem); //это я пишу кнопку к каждой заметке
 
 
-        // const privat_button = document.createElement("button");
-        // li.appendChild(document.createTextNode(input.value));
-        // notes.appendChild(li);
-        // elem.parentNode.removeChild(elem); //это я пишу кнопку к каждой заметке
 
-        
+    //         const nameFormat = ('/\S/', $input);
+    //         if (nameField.value !=0) {
+    //             console.log(nameField.value)
+    //             return true;
+    //         } else {
+    //             document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
+    //             return false;
+    //         }
 
-        //         const nameFormat = ('/\S/', $input);
-        //         if (nameField.value !=0) {
-        //             console.log(nameField.value)
-        //             return true;
-        //         } else {
-        //             document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
-        //             return false;
-        //         }
+    //         function isEmpty(str) {
+    //             if (str.trim() == '') 
+    //               return true;
 
-        //         function isEmpty(str) {
-        //             if (str.trim() == '') 
-        //               return true;
+    //             return false;
+    // }
+}
 
-        //             return false;
-        // }
+const deleteAllNotes = () => {
+    notes.innerHTML = "";
+}
 
-        const deleteAllNotes = () => {
-            notes.innerHTML = "";
-        }
-
-        button_add.addEventListener(`click`, addNote); //добавляем заметку
-        button_delete.addEventListener(`click`, deleteAllNotes); //удаляем все заметки
+button_add.addEventListener(`click`, addNote); //добавляем заметку
+button_delete.addEventListener(`click`, deleteAllNotes); //удаляем все заметки
