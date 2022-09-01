@@ -12,31 +12,28 @@ const notes = document.getElementById("notes") //список заметок ul
 
 
 const addNote = () => {
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    notes.appendChild(li); // добавляем заметку
 
-    const privat_button = document.createElement("button");
-    privat_button.appendChild(document.createTextNode("Delete it"));
-    notes.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
+    if (input.value != "") {
+        console.log("Катит")
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(input.value));
+        notes.appendChild(li); // добавляем заметку
+    
+        const privat_button = document.createElement("button");
+        privat_button.appendChild(document.createTextNode("Delete it"));
+        notes.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
+        privat_button.addEventListener(`click`, ...);
 
+        // var elem = document.getElementById("myDiv");
+        // elem.parentNode.removeChild(elem);
+        
 
+        return true;
 
-    //         const nameFormat = ('/\S/', $input);
-    //         if (nameField.value !=0) {
-    //             console.log(nameField.value)
-    //             return true;
-    //         } else {
-    //             document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
-    //             return false;
-    //         }
-
-    //         function isEmpty(str) {
-    //             if (str.trim() == '') 
-    //               return true;
-
-    //             return false;
-    // }
+    } else {
+        document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
+        return false;
+    }
 }
 
 const deleteAllNotes = () => {
