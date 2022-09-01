@@ -14,12 +14,11 @@ const notes = document.getElementById("notes") //список заметок ul
 const addNote = () => {
     const li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
-    notes.appendChild(li);
+    notes.appendChild(li); // добавляем заметку
 
     const privat_button = document.createElement("button");
-    // privat_button.appendChild(document.createTextNode(input.value));
-    notes.appendChild(privat_button);
-    // elem.parentNode.removeChild(elem); //это я пишу кнопку к каждой заметке
+    privat_button.appendChild(document.createTextNode("Delete it"));
+    notes.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
 
 
 
