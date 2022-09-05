@@ -18,20 +18,29 @@ const addNote = () => {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(input.value));
         notes.appendChild(li); // добавляем заметку
-    
+
         const privat_button = document.createElement("button");
         privat_button.appendChild(document.createTextNode("Delete it"));
-        notes.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
-        privat_button.addEventListener(`click`, ...);
+        li.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
+        // privat_button.addEventListener(`click`, target.parentNode.remove(li));    
 
         // var elem = document.getElementById("myDiv");
         // elem.parentNode.removeChild(elem);
-        
+
+
+        // const list = document.querySelector('.list');
+        // // console.log(list);
+        // list.addEventListener('click', (event) => {
+        //     console.log(event.target);
+        //     if (event.target.className == 'button')
+        //         event.target.parentNode.remove();
+        // })
 
         return true;
 
     } else {
         document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
+        //надо еще сделать чтоб надпись исчезала
         return false;
     }
 }
