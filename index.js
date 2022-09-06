@@ -10,38 +10,42 @@ const form = document.getElementById("form"); //форма ввода
 const input = document.getElementById("input"); //поле ввода
 const notes = document.getElementById("notes") //список заметок ul
 
-
 const addNote = () => {
 
     if (input.value != "") {
-        console.log("Катит")
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(input.value));
-        notes.appendChild(li); // добавляем заметку
+        notes.appendChild(li); // done, добавляем заметку
 
         const privat_button = document.createElement("button");
         privat_button.appendChild(document.createTextNode("Delete it"));
-        li.appendChild(privat_button); // добавляем кнопку для удаления конкретной заметки
-        // privat_button.addEventListener(`click`, target.parentNode.remove(li));    
+        li.appendChild(privat_button); // done, добавляем кнопку для удаления конкретной заметки
 
-        // var elem = document.getElementById("myDiv");
-        // elem.parentNode.removeChild(elem);
-
+        privat_button.classList.add("privat_button");
+        console.log(privat_button.className); // done, добавляем класс кнопке
 
         // const list = document.querySelector('.list');
-        // // console.log(list);
         // list.addEventListener('click', (event) => {
         //     console.log(event.target);
         //     if (event.target.className == 'button')
         //         event.target.parentNode.remove();
         // })
 
+
+
+        // privat_button.addEventListener(`click`, target.parentNode.remove(li));
+        // var elem = document.getElementById("myDiv");
+        // elem.parentNode.removeChild(elem);
         return true;
 
     } else {
         document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
-        //надо еще сделать чтоб надпись исчезала
-        return false;
+
+        // if (document.getElementById('cont').innerHTML != "")
+        // document.getElementsByClassName("buttons") - произошел клик
+        // то тогда:
+        // document.getElementById('cont').innerHTML = '';
+        // return false;
     }
 }
 
