@@ -23,23 +23,22 @@ const addNote = () => {
         privat_button.classList.add("privat_button"); // done, добавляем класс кнопке
 
         const buttons = document.querySelectorAll(".privat_button") //done, создается массив кнопок
-        buttons.addEventListener(`click`, (event) => {
-            console.log(event.target);
-            // if (event.target.className == 'button')
-            // event.target.parentNode.remove();
-        }) // удаление заметки, не работает
+        buttons.forEach((e) => e.addEventListener("click", (e) => {
+                e.target.parentNode.remove(); //done, заметка удаляется
+            }))
+    return true;
 
-        return true;
 
-    } else {
-        document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
 
-        // if (document.getElementById('cont').innerHTML != "")
-        // document.getElementsByClassName("buttons") - произошел клик
-        // то тогда:
-        // document.getElementById('cont').innerHTML = '';
-        // return false;
-    }
+} else {
+    document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
+
+    // if (document.getElementById('cont').innerHTML != "")
+    // document.getElementsByClassName("buttons") - произошел клик
+    // то тогда:
+    // document.getElementById('cont').innerHTML = '';
+    // return false;
+}
 }
 
 const deleteAllNotes = () => {
