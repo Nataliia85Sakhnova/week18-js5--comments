@@ -33,8 +33,11 @@ const addNote = () => {
 } else {
     document.getElementById('cont').innerHTML = 'Пустые заметки не сохраняются';
 
-    // if (document.getElementById('cont').innerHTML != "")
+    if (document.getElementById('cont').innerHTML != "")
+    // напишу-ка я функцию, которая ко всем кнопкам на странице присобачивает одно и то же действие:
     // document.getElementsByClassName("buttons") - произошел клик
+    // или document.getElementsByClassName("button_add") - произошел клик
+    // или document.getElementsByClassName("button_delete") - произошел клик
     // то тогда:
     // document.getElementById('cont').innerHTML = '';
     // return false;
