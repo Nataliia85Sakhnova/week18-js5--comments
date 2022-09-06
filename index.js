@@ -20,22 +20,15 @@ const addNote = () => {
         const privat_button = document.createElement("button");
         privat_button.appendChild(document.createTextNode("Delete it"));
         li.appendChild(privat_button); // done, добавляем кнопку для удаления конкретной заметки
+        privat_button.classList.add("privat_button"); // done, добавляем класс кнопке
 
-        privat_button.classList.add("privat_button");
-        console.log(privat_button.className); // done, добавляем класс кнопке
+        const buttons = document.querySelectorAll(".privat_button") //done, создается массив кнопок
+        buttons.addEventListener(`click`, (event) => {
+            console.log(event.target);
+            // if (event.target.className == 'button')
+            // event.target.parentNode.remove();
+        }) // удаление заметки, не работает
 
-        // const list = document.querySelector('.list');
-        // list.addEventListener('click', (event) => {
-        //     console.log(event.target);
-        //     if (event.target.className == 'button')
-        //         event.target.parentNode.remove();
-        // })
-
-
-
-        // privat_button.addEventListener(`click`, target.parentNode.remove(li));
-        // var elem = document.getElementById("myDiv");
-        // elem.parentNode.removeChild(elem);
         return true;
 
     } else {
@@ -53,5 +46,5 @@ const deleteAllNotes = () => {
     notes.innerHTML = "";
 }
 
-button_add.addEventListener(`click`, addNote); //добавляем заметку
-button_delete.addEventListener(`click`, deleteAllNotes); //удаляем все заметки
+button_add.addEventListener(`click`, addNote); //done, добавляем заметку
+button_delete.addEventListener(`click`, deleteAllNotes); //done, удаляем все заметки
